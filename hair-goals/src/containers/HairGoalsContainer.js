@@ -29,7 +29,7 @@ const HairGoalsContainer = () => {
     useEffect(() => {
         getAllUsers();
     }, [])
-    // console.log(users);
+    console.log(users);
 
     const findUserById = function(id){
         return users.find((user) => {
@@ -41,21 +41,21 @@ const HairGoalsContainer = () => {
         const request = new Request();
         const url = "/users/" + id;
         request.delete(url)
-        .then(() => window.location = "/users")
+        .then(() => window.location = "/user-details")
     }
     
 
     const handleCreate = function(user){
         const request = new Request();
         request.post("/users", user)
-        .then(() => window.location = "/users")
+        .then(() => window.location = "/user-details")
     }
 
     const handleUpdate = function(user){
         const request = new Request();
         request.patch("/users/" + user.id, user)
         .then(() => {
-            window.location = "/users/" + user.id;
+            window.location = "/users/" + user.id; // we don't currently have a /users/ path
         })
     }
     
@@ -70,7 +70,7 @@ const HairGoalsContainer = () => {
             <SiteHeader/>                
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
-                    <Route path="/new-user" render={() => <Form onNewUserSubmit={(user) => addNewUser(user)}/>}/>
+                    <Route path="/new-user" render={() => <Form onNewUserSubmit={handleCreate}/>}/>
                     <Route path="/user-details" component={UserData}/>
                     <Route path="/add-measurement" component={AddMeasurement}/>
                     <Route path="/edit-details" component={EditDetails}/>
@@ -98,4 +98,4 @@ export default HairGoalsContainer;
 //     setUsers(updatedUsers);
 // }
 
-<Route path="/new-user" render={() => <Form onNewUserSubmit={(user) => addNewUser(user)}/>}/>
+{/* <Route path="/new-user" render={() => <Form onNewUserSubmit={(user) => addNewUser(user)}/>}/> */}

@@ -90,7 +90,7 @@ const Form = ({onNewUserSubmit}) => {
             />
             <input
             type="number"
-            placeholder="Your Hair Length Please"
+            placeholder="Your Hair Length in cm Please"
             value={hairLength}
             onChange={handleHairLengthChange}
             /> 
@@ -108,7 +108,7 @@ const Form = ({onNewUserSubmit}) => {
             /> 
             <input
             type="number"
-            placeholder="Hair Goal"
+            placeholder="Hair Goal Length in cm"
             value={goalHairLength}
             onChange={handleGoalHairLengthChange}
             /> 
