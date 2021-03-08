@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React, {useEffect, useState}from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SiteHeader from './SiteHeader';
 import Welcome from '../components/Welcome';
@@ -7,29 +7,36 @@ import UserData from '../components/UserData';
 import EditDetails from '../components/EditDetails';
 import AddMeasurement from '../components/AddMeasurement';
 import ErrorPage from '../components/ErrorPage';
+// import Request from '../helpers/Request';
 
 
 
 const HairGoalsContainer = () => {
 
-    const [users, setUsers] = useState(
-        [
-            {
-                id:1,
-                name: "Mario",
-                hairLength: 60,
-                date:"02/04/2021",
-                birthday:"08/05/1991"
-            }
-        ]
-    )
+    const [users, setUsers] = useState([]);
+    // const [measurements, setMeasurements] = useState([]);
+    const [loaded, setLoaded] = useState(false);
 
+    const getAllUsers = () => {
+        console.log("Keep your hair on! I'm fetching the users NOW!");
+        fetch('/users')
+        .then(res => res.json())
+        .then(data => setUsers(data))
+        .then(() => setLoaded(true))
+        .catch(err => console.error);  
+    }
+    
+    useEffect(() => {
+        getAllUsers();
+    }, [])
+    console.log(users);
+    
     const addNewUser = (newUser) => {
         newUser.id = Date.now(); // eventually this id will come from db
         const updatedUsers = [...users, newUser];
         setUsers(updatedUsers);
     }
-
+    
     return (
         <Router>
             <>
@@ -50,3 +57,11 @@ const HairGoalsContainer = () => {
 }
 
 export default HairGoalsContainer;
+// const request = new Request();
+// const userPromise = request.get('/api/users');
+// const measurementPromise = request.get('/api/measurements');
+
+// Promise.all(userPromise)
+// .then((data) => setUsers(data))
+// .then(() => setLoaded(true))
+// .catch(err => console.error);
