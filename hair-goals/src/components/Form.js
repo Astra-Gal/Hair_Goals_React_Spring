@@ -10,6 +10,8 @@ const Form = ({onNewUserSubmit}) => {
 
     const [birthday, setBirthday] = useState("");
 
+    const [goalHairLength, setGoalHairLength] = useState("");
+
     const handleNameChange = (evt) => {
         setName(evt.target.value);
     }
@@ -26,6 +28,10 @@ const Form = ({onNewUserSubmit}) => {
         setBirthday(evt.target.value);
     }
 
+    const handleGoalHairLengthChange = (evt) => {
+        setGoalHairLength(evt.target.value);
+    }
+
     const handleFormSubmit = (evt) => {
         console.log("User has been submitted");
         evt.preventDefault();
@@ -33,6 +39,7 @@ const Form = ({onNewUserSubmit}) => {
         const hairLengthToSubmit = hairLength;
         const dateToSubmit = date.trim(); // might need to reformat date
         const birthdayToSubmit = birthday.trim();
+        const goalHairLengthToSubmit = goalHairLength;
 
         let proceed = true;
 
@@ -48,6 +55,9 @@ const Form = ({onNewUserSubmit}) => {
         if(!birthdayToSubmit){
             proceed = false
         }
+        if(!goalHairLengthToSubmit){
+            proceed = false
+        }
         
         
         if(proceed === true) {
@@ -55,13 +65,15 @@ const Form = ({onNewUserSubmit}) => {
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
                 date: dateToSubmit,
-                birthday: birthdayToSubmit               
+                birthday: birthdayToSubmit,
+                goalHairLength: goalHairLengthToSubmit               
             });           
 
             setName("");
             setHairLength(0);
             setDate("");
             setBirthday("");
+            setGoalHairLength(0);
         } 
     }
 
@@ -93,7 +105,13 @@ const Form = ({onNewUserSubmit}) => {
             placeholder="Your Birthday Please"
             value={birthday}
             onChange={handleBirthdayChange}
-            />  
+            /> 
+            <input
+            type="number"
+            placeholder="Hair Goal"
+            value={goalHairLength}
+            onChange={handleGoalHairLengthChange}
+            /> 
             <input
                 type="Submit"
             />                                   
