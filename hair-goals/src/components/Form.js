@@ -27,30 +27,44 @@ const Form = ({onNewUserSubmit}) => {
     }
 
     const handleFormSubmit = (evt) => {
+        console.log("User has been submitted");
         evt.preventDefault();
         const nameToSubmit = name.trim();
-        const hairLengthToSubmit = hairLength.trim();
+        const hairLengthToSubmit = hairLength;
         const dateToSubmit = date.trim(); // might need to reformat date
         const birthdayToSubmit = birthday.trim();
-        if(!nameToSubmit || !hairLengthToSubmit || !dateToSubmit || birthdayToSubmit){
-            return
+
+        let proceed = true;
+
+        if(!nameToSubmit){
+            proceed = false
+        } 
+        if(!hairLengthToSubmit){
+            proceed = false
         }
-
-        onNewUserSubmit({
-            name: nameToSubmit,
-            hairLength: hairLengthToSubmit,
-            date: dateToSubmit,
-            birthday: birthdayToSubmit
-            
-        });
+        if(!dateToSubmit){
+            proceed = false
+        }
+        if(!birthdayToSubmit){
+            proceed = false
+        }
         
+        
+        if(proceed === true) {
+            onNewUserSubmit({
+                name: nameToSubmit,
+                hairLength: hairLengthToSubmit,
+                date: dateToSubmit,
+                birthday: birthdayToSubmit               
+            });           
 
-        setName("");
-        setHairLength(0);
-        setDate("");
-        setBirthday("");
-        console.log("User has been submitted");
+            setName("");
+            setHairLength(0);
+            setDate("");
+            setBirthday("");
+        } 
     }
+
 
 
 
