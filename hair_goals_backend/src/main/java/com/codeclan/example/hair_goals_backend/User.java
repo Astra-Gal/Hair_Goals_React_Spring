@@ -42,7 +42,7 @@ public class User {
         this.hairLength = hairLength;
         this.goalHairLength = goalHairLength;
         this.growthRate = 1;
-        this.timeTillGoal = (goalHairLength - hairLength) / growthRate;
+        this.timeTillGoal = 0;
         this.measurements = new ArrayList<Measurement>();
     }
 
@@ -86,8 +86,8 @@ public class User {
         return timeTillGoal;
     }
 
-    public void setTimeTillGoal(Integer timeTillGoal) {
-        this.timeTillGoal = timeTillGoal;
+    public void setTimeTillGoal() {
+        this.timeTillGoal = (goalHairLength - hairLength) / growthRate;
     }
 
     public void addMeasurement (Measurement measurement){

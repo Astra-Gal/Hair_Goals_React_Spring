@@ -41,6 +41,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
         const dateToSubmit = date.trim(); // might need to reformat date
         // const birthdayToSubmit = birthday.trim();
         const goalHairLengthToSubmit = goalHairLength;
+        
 
         let proceed = true;
 
@@ -65,9 +66,11 @@ const NewUserForm = ({onNewUserSubmit}) => {
             onNewUserSubmit({
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
-                date: dateToSubmit,
+                growthRate: 1,
+                // date: dateToSubmit,
                 // birthday: birthdayToSubmit,
-                goalHairLength: goalHairLengthToSubmit               
+                goalHairLength: goalHairLengthToSubmit, 
+                // timeTillGoal: ((goalHairLength - hairLength) / growthRate)
             });           
 
             setName("");

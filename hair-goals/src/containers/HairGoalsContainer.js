@@ -73,8 +73,14 @@ const HairGoalsContainer = () => {
             <SiteHeader/>                
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
-                    <Route path="/new-user" render={() => <NewUserForm onNewUserSubmit={handleCreate}/>}/>
-                    <Route path="/user-details" component={UserData}/>
+                    <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>
+                    <Route exact path="/user-details/:id" render={(props) =>{
+                        const id = props.match.params.id;
+                        const user = findUserById(id);
+                        return <UserData user={user}
+                        onDelete={handleDelete}
+                        />
+                    }} />
                     <Route path="/add-measurement" component={AddMeasurement}/>
                     <Route path="/edit-details" component={EditDetails}/>
                     <Route component={ErrorPage}/>
