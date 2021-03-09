@@ -1,16 +1,12 @@
 import React from 'react';
 
-const UserData = ({user, onDelete}) => {
+const UserData = ({user}) => {
 
     if (!user){
       return "Hawd on!!!!"
     }
 
-    const handleDelete = () => {
-      onDelete(user.id)
-    }
-
-    
+  
     const userMeasurements = user.measurements.map((measurement, index) => {
       return <li key={index}> Date measured: {measurement.dateMeasured} - Length: {measurement.length}</li>
     })

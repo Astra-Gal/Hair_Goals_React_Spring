@@ -4,12 +4,10 @@ import UserData from './UserData';
 const NewUserForm = ({onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
-   
+
     const [date, setDate] = useState("");
 
     const [hairLength, setHairLength] = useState(0);
-
-    // const [birthday, setBirthday] = useState("");
 
     const [goalHairLength, setGoalHairLength] = useState("");
 
@@ -25,10 +23,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         setDate(evt.target.value);
     }
 
-    // const handleBirthdayChange = (evt) => {
-    //     setBirthday(evt.target.value);
-    // }
-
     const handleGoalHairLengthChange = (evt) => {
         setGoalHairLength(evt.target.value);
     }
@@ -39,7 +33,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         const nameToSubmit = name.trim();
         const hairLengthToSubmit = hairLength;
         const dateToSubmit = date.trim(); // might need to reformat date
-        // const birthdayToSubmit = birthday.trim();
         const goalHairLengthToSubmit = goalHairLength;
         
 
@@ -54,9 +47,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         if(!dateToSubmit){
             proceed = false
         }
-        // if(!birthdayToSubmit){
-        //     proceed = false
-        // }
         if(!goalHairLengthToSubmit){
             proceed = false
         }
@@ -67,16 +57,13 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
                 growthRate: 1,
-                // date: dateToSubmit,
-                // birthday: birthdayToSubmit,
+                date: dateToSubmit,
                 goalHairLength: goalHairLengthToSubmit, 
-                // timeTillGoal: ((goalHairLength - hairLength) / growthRate)
             });           
 
             setName("");
             setHairLength(0);
             setDate("");
-            // setBirthday("");
             setGoalHairLength(0);
         } 
     }
@@ -105,12 +92,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
             value={date}
             onChange={handleDateChange}
             />
-            {/* <input
-            type="text"
-            placeholder="Your Birthday Please"
-            value={birthday}
-            onChange={handleBirthdayChange}
-            />  */}
             <input
             type="number"
             placeholder="Hair Goal Length in cm Please"
