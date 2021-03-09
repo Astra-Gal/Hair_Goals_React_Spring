@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import UserData from './UserData';
 
-const Form = ({onNewUserSubmit}) => {
+const NewUserForm = ({onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
    
@@ -24,9 +25,9 @@ const Form = ({onNewUserSubmit}) => {
         setDate(evt.target.value);
     }
 
-    const handleBirthdayChange = (evt) => {
-        setBirthday(evt.target.value);
-    }
+    // const handleBirthdayChange = (evt) => {
+    //     setBirthday(evt.target.value);
+    // }
 
     const handleGoalHairLengthChange = (evt) => {
         setGoalHairLength(evt.target.value);
@@ -38,7 +39,7 @@ const Form = ({onNewUserSubmit}) => {
         const nameToSubmit = name.trim();
         const hairLengthToSubmit = hairLength;
         const dateToSubmit = date.trim(); // might need to reformat date
-        const birthdayToSubmit = birthday.trim();
+        // const birthdayToSubmit = birthday.trim();
         const goalHairLengthToSubmit = goalHairLength;
 
         let proceed = true;
@@ -52,9 +53,9 @@ const Form = ({onNewUserSubmit}) => {
         if(!dateToSubmit){
             proceed = false
         }
-        if(!birthdayToSubmit){
-            proceed = false
-        }
+        // if(!birthdayToSubmit){
+        //     proceed = false
+        // }
         if(!goalHairLengthToSubmit){
             proceed = false
         }
@@ -65,7 +66,7 @@ const Form = ({onNewUserSubmit}) => {
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
                 date: dateToSubmit,
-                birthday: birthdayToSubmit,
+                // birthday: birthdayToSubmit,
                 goalHairLength: goalHairLengthToSubmit               
             });           
 
@@ -81,6 +82,7 @@ const Form = ({onNewUserSubmit}) => {
 
 
     return (
+        <>
         <form onSubmit={handleFormSubmit}>
             <input
             type="text"
@@ -116,6 +118,8 @@ const Form = ({onNewUserSubmit}) => {
                 type="Submit"
             />                                   
         </form>
+        <UserData/>
+        </>
     )
 }
 
@@ -123,4 +127,4 @@ const Form = ({onNewUserSubmit}) => {
 
 
 
-export default Form;
+export default NewUserForm;

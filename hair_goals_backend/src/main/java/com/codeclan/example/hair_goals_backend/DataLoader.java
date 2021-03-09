@@ -21,10 +21,10 @@ public class DataLoader implements ApplicationRunner {
 
     }
     public void run (ApplicationArguments args){
-        User user1 = new User("Bob", "02/05/1990", 300, 500 );
+        User user1 = new User("Bob", 300, 500 );
         userRepository.save(user1);
 
-        User user2 = new User("Bobbette", "02/05/1990", 400, 600 );
+        User user2 = new User("Bobbette", 400, 600 );
         userRepository.save(user2);
 
 

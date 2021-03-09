@@ -2,7 +2,7 @@ import React, {useEffect, useState}from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SiteHeader from './SiteHeader';
 import Welcome from '../components/Welcome';
-import Form from '../components/Form';
+import NewUserForm from '../components/NewUserForm';
 import UserData from '../components/UserData';
 import EditDetails from '../components/EditDetails';
 import AddMeasurement from '../components/AddMeasurement';
@@ -63,6 +63,9 @@ const HairGoalsContainer = () => {
     if(!users){
         return null;
     }
+    if(!loaded){
+        return null;
+    }
 
     return (
         <Router>
@@ -70,7 +73,7 @@ const HairGoalsContainer = () => {
             <SiteHeader/>                
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
-                    <Route path="/new-user" render={() => <Form onNewUserSubmit={handleCreate}/>}/>
+                    <Route path="/new-user" render={() => <NewUserForm onNewUserSubmit={handleCreate}/>}/>
                     <Route path="/user-details" component={UserData}/>
                     <Route path="/add-measurement" component={AddMeasurement}/>
                     <Route path="/edit-details" component={EditDetails}/>

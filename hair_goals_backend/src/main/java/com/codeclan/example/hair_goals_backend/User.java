@@ -18,8 +18,8 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "birthday")
-    private String birthday;
+//    @Column(name = "birthday")
+//    private String birthday;
 
     @Column(name = "hair_length")
     private Integer hairLength;
@@ -37,13 +37,12 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Measurement> measurements;
 
-    public User(String name, String birthday, Integer hairLength, Integer goalHairLength) {
+    public User(String name, Integer hairLength, Integer goalHairLength) {
         this.name = name;
-        this.birthday = birthday;
         this.hairLength = hairLength;
         this.goalHairLength = goalHairLength;
         this.growthRate = 1;
-        this.timeTillGoal = 0;
+        this.timeTillGoal = (goalHairLength - hairLength) / growthRate;
         this.measurements = new ArrayList<Measurement>();
     }
 
@@ -60,12 +59,6 @@ public class User {
     }
     public void setName(String name) {
         this.name = name;
-    }
-    public String getBirthday() {
-        return birthday;
-    }
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
     }
     public Integer getHairLength() {
         return hairLength;
