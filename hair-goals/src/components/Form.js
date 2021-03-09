@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 const Form = ({onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
+   
+    const [date, setDate] = useState("");
 
     const [hairLength, setHairLength] = useState(0);
 
-    const [date, setDate] = useState("");
-
-    const [birthday, setBirthday] = useState("");
+    // const [birthday, setBirthday] = useState("");
 
     const [goalHairLength, setGoalHairLength] = useState("");
 
@@ -72,7 +72,7 @@ const Form = ({onNewUserSubmit}) => {
             setName("");
             setHairLength(0);
             setDate("");
-            setBirthday("");
+            // setBirthday("");
             setGoalHairLength(0);
         } 
     }
@@ -108,7 +108,7 @@ const Form = ({onNewUserSubmit}) => {
             />  */}
             <input
             type="number"
-            placeholder="Hair Goal Length in cm"
+            placeholder="Hair Goal Length in cm Please"
             value={goalHairLength}
             onChange={handleGoalHairLengthChange}
             /> 

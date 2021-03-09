@@ -83,19 +83,3 @@ const HairGoalsContainer = () => {
 }
 
 export default HairGoalsContainer;
-// const request = new Request();
-// const userPromise = request.get('/api/users');
-// const measurementPromise = request.get('/api/measurements');
-
-// Promise.all(userPromise)
-// .then((data) => setUsers(data))
-// .then(() => setLoaded(true))
-// .catch(err => console.error);
-
-// const addNewUser = (newUser) => {
-//     newUser.id = Date.now(); // eventually this id will come from db
-//     const updatedUsers = [...users, newUser];
-//     setUsers(updatedUsers);
-// }
-
-{/* <Route path="/new-user" render={() => <Form onNewUserSubmit={(user) => addNewUser(user)}/>}/> */}
