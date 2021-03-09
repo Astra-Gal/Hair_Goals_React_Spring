@@ -100,12 +100,12 @@ const Form = ({onNewUserSubmit}) => {
             value={date}
             onChange={handleDateChange}
             />
-            <input
+            {/* <input
             type="text"
             placeholder="Your Birthday Please"
             value={birthday}
             onChange={handleBirthdayChange}
-            /> 
+            />  */}
             <input
             type="number"
             placeholder="Hair Goal Length in cm"
