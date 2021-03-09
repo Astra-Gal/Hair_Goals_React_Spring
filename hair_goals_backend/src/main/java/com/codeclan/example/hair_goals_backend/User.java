@@ -30,6 +30,9 @@ public class User {
     @Column(name = "growth_rate")
     private Integer growthRate;
 
+    @Column(name = "time_till_goal")
+    private Integer timeTillGoal;
+
     @JsonIgnoreProperties(value = "user")
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Measurement> measurements;
@@ -40,6 +43,7 @@ public class User {
         this.hairLength = hairLength;
         this.goalHairLength = goalHairLength;
         this.growthRate = 1;
+        this.timeTillGoal = 0;
         this.measurements = new ArrayList<Measurement>();
     }
 
@@ -84,6 +88,15 @@ public class User {
     public List<Measurement> getMeasurements() {
         return measurements;
     }
+
+    public Integer getTimeTillGoal() {
+        return timeTillGoal;
+    }
+
+    public void setTimeTillGoal(Integer timeTillGoal) {
+        this.timeTillGoal = timeTillGoal;
+    }
+
     public void addMeasurement (Measurement measurement){
         this.measurements.add(measurement);
     }
