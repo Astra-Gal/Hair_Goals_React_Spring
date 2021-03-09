@@ -1,7 +1,7 @@
 package com.codeclan.example.hair_goals_backend;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.tools.javah.Gen;
+//import com.sun.tools.javah.Gen;
 
 import javax.persistence.*;
 import java.util.ArrayList;
