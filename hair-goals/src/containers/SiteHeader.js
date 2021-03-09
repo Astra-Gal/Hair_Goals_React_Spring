@@ -7,8 +7,8 @@ const SiteHeader = () => {
     return (
         <>
         
-        <Logo/>
         <NavBar/>
+        <Logo/>
         </>
     )
 }

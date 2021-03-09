@@ -3,7 +3,7 @@ import React from 'react'
 const Logo = () => {
     return (
         <>
-        <h1>Hair Goals</h1>
+        <h1 className="logo">Hair Goals</h1>
         </>
     )
 }

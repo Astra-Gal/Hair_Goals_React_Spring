@@ -4,7 +4,9 @@ const UserData = () => {
     return (
 
       <>
-        <h3>I am married to the User!</h3>
+        <h3>Congratulations!</h3> 
+        <p>You've just embarked on a magical hair journey! Let's Grow Together</p> 
+        <h4>You have ??? months till you meet your goal length</h4>
         </>
     )
 }
