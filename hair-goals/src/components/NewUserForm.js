@@ -72,38 +72,48 @@ const NewUserForm = ({onNewUserSubmit}) => {
 
 
     return (
-        <>
+        <div className="form-wrapper">
         <form onSubmit={handleFormSubmit}>
-            <input
-            type="text"
-            placeholder="Your Name Please"
-            value={name}
-            onChange={handleNameChange}
-            />
-            <input
-            type="number"
-            placeholder="Your Hair Length in cm Please"
-            value={hairLength}
-            onChange={handleHairLengthChange}
-            /> 
-            <input
-            type="text"
-            placeholder="What is Today"
-            value={date}
-            onChange={handleDateChange}
-            />
-            <input
-            type="number"
-            placeholder="Hair Goal Length in cm Please"
-            value={goalHairLength}
-            onChange={handleGoalHairLengthChange}
-            /> 
-            <input
-                type="Submit"
-            />                                   
+            <label htmlFor="name">
+                What's your name?
+                <input
+                    type="text"
+                    placeholder="Your Name Please"
+                    value={name}
+                    onChange={handleNameChange}
+                />
+            </label>
+            <label htmlFor="hairLength">
+                What's your current hair length in cm?
+                <input
+                    type="number"
+                    placeholder="Your Hair Length in cm Please"
+                    value={hairLength}
+                    onChange={handleHairLengthChange}
+                /> 
+            </label>
+            <label htmlFor="date">
+                What's the date today?
+                <input
+                    type="text"
+                    placeholder="What is Today"
+                    value={date}
+                    onChange={handleDateChange}
+                />
+            </label>
+            <label htmlFor="goalLength">
+                What's your goal length in cm?
+                <input
+                    type="number"
+                    placeholder="Hair Goal Length in cm Please"
+                    value={goalHairLength}
+                    onChange={handleGoalHairLengthChange}
+                /> 
+            </label>
+            <button>Submit</button>                                  
         </form>
         <UserData/>
-        </>
+        </div>
     )
 }
 

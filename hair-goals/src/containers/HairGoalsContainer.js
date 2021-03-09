@@ -28,7 +28,7 @@ const HairGoalsContainer = () => {
     
     useEffect(() => {
         getAllUsers();
-    }, [])
+    }, [setUsers])
     console.log(users);
 
     const findUserById = function(id){
@@ -48,7 +48,10 @@ const HairGoalsContainer = () => {
     const handleCreate = function(user){
         const request = new Request();
         request.post("/users", user)
-        .then(() => window.location = "/user-details")
+        .then(() => window.locaion = "/user-details") // eventually it should take us
+    // somewhere with the user's id, like...
+    // .then(() => window.location = "/user-details/" + user.id)
+    // but user maybe hasn't loaded at this point, so it can't get the id of undefined
     }
 
     const handleUpdate = function(user){
