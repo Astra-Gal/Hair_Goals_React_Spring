@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import UserData from './UserData';
+import NavBar from './NavBar';
+import Logo from './Logo';
 
 const NewUserForm = ({onNewUserSubmit}) => {
 
@@ -63,6 +65,9 @@ const NewUserForm = ({onNewUserSubmit}) => {
 
 
     return (
+        <>
+        <NavBar/>
+        <Logo/>
         <div className="form-wrapper">
         <form onSubmit={handleFormSubmit}>
             <label htmlFor="name">
@@ -70,6 +75,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 <input
                     type="text"
                     placeholder="Name Please!"
+                    required="true"
                     value={name}
                     onChange={handleNameChange}
                 />
@@ -79,6 +85,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 <input
                     type="number"
                     placeholder="Hair Length in cm"
+                    required="true"
                     value={hairLength}
                     onChange={handleHairLengthChange}
                 /> 
@@ -88,6 +95,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 What's your goal length in cm?
                 <input
                     type="number"
+                    required="true"
                     placeholder="Goal Length in cm"
                     value={goalHairLength}
                     onChange={handleGoalHairLengthChange}
@@ -95,8 +103,9 @@ const NewUserForm = ({onNewUserSubmit}) => {
             </label>
             <button>See your hair future...<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button>                                  
         </form>
-        <UserData/>
         </div>
+        <UserData/>
+        </>
     )
 }
 
