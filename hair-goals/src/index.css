@@ -54,6 +54,7 @@ ul {
   width: 70vw;
   margin-left: 15vw;
   border-radius: 3px;
+  background: rgb(252, 252, 252);
 }
 
 form {
@@ -63,8 +64,31 @@ form {
 label {
   display: flex;
   padding: 5x;
+  align-items: center;
+  justify-content: space-between;
 }
 input {
   padding: 5px;
   margin: 5px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: -1px -1px 4px rgba(3, 82, 71, 0.2);
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(150, 121, 167);
+  color: aliceblue;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  border-radius: 3px;
+  margin: 5px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+svg {
+  fill: aliceblue;
 }
