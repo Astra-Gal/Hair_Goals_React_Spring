@@ -1,8 +1,14 @@
 import React from 'react';
+import NavBar from './NavBar';
 
 const Welcome = () => {
     return (
-        <h1>Welcome</h1>
+        
+        <>
+        <NavBar/>
+        <h2 className="welcome">Let's grow together...</h2>
+    
+        </>
     );
 }
 

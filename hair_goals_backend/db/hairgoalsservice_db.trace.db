@@ -1194,8 +1194,23 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 13:46:29 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+<<<<<<< HEAD
+2021-03-10 11:27:01 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+<<<<<<< HEAD
+2021-03-10 16:55:51 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/giuliagalastro/codeclan_work/final_project/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 16:51:19 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/user/codeclan_work/FinalProject/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1229,11 +1244,20 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+<<<<<<< HEAD
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
@@ -1246,8 +1270,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 15:02:54 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 11:55:31 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1281,11 +1310,19 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
@@ -1298,8 +1335,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 15:05:38 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 14:17:34 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1333,11 +1375,19 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
@@ -1350,8 +1400,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 15:05:38 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 15:22:39 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1385,11 +1440,19 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
@@ -1402,8 +1465,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 15:06:39 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 15:25:43 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1437,11 +1505,19 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
@@ -1454,8 +1530,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 15:06:39 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 15:39:13 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1489,11 +1570,19 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
@@ -1506,8 +1595,13 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
 2021-03-10 16:51:13 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+=======
+2021-03-10 15:58:05 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+>>>>>>> develop
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)
 	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
@@ -1541,11 +1635,34 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+<<<<<<< HEAD
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 33 more
 Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/rhiannonwilson/codeclan_work/week_15/hair_goals/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/angelo/codeclan_work/week_15/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+<<<<<<< HEAD
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/giuliagalastro/codeclan_work/final_project/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/giuliagalastro/codeclan_work/final_project/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+=======
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/user/codeclan_work/FinalProject/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/user/codeclan_work/FinalProject/Hair_Goals_React_Spring/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]
+>>>>>>> develop
+>>>>>>> develop
+>>>>>>> develop
 	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
 	at org.h2.mvstore.FileStore.open(FileStore.java:166)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)

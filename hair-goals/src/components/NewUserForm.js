@@ -5,9 +5,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
 
-    const [date, setDate] = useState("");
-
-    const [hairLength, setHairLength] = useState(0);
+    const [hairLength, setHairLength] = useState("");
 
     const [goalHairLength, setGoalHairLength] = useState("");
 
@@ -19,9 +17,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         setHairLength(evt.target.value);
     }
 
-    const handleDateChange = (evt) => {
-        setDate(evt.target.value);
-    }
 
     const handleGoalHairLengthChange = (evt) => {
         setGoalHairLength(evt.target.value);
@@ -32,7 +27,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         evt.preventDefault();
         const nameToSubmit = name.trim();
         const hairLengthToSubmit = hairLength;
-        const dateToSubmit = date.trim(); // might need to reformat date
         const goalHairLengthToSubmit = goalHairLength;
         
 
@@ -42,9 +36,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
             proceed = false
         } 
         if(!hairLengthToSubmit){
-            proceed = false
-        }
-        if(!dateToSubmit){
             proceed = false
         }
         if(!goalHairLengthToSubmit){
@@ -57,14 +48,12 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
                 growthRate: 1,
-                date: dateToSubmit,
                 goalHairLength: goalHairLengthToSubmit, 
                 keyLength: null
             });           
 
             setName("");
             setHairLength(0);
-            setDate("");
             setGoalHairLength(0);
         
         } 
@@ -77,42 +66,34 @@ const NewUserForm = ({onNewUserSubmit}) => {
         <div className="form-wrapper">
         <form onSubmit={handleFormSubmit}>
             <label htmlFor="name">
-                What's your name?
+                What's your name?<br/>
                 <input
                     type="text"
-                    placeholder="Your Name Please"
+                    placeholder="Name Please!"
                     value={name}
                     onChange={handleNameChange}
                 />
             </label>
             <label htmlFor="hairLength">
-                What's your current hair length in cm?
+                What's your hair length in cm?
                 <input
                     type="number"
-                    placeholder="Your Hair Length in cm Please"
+                    placeholder="Hair Length in cm"
                     value={hairLength}
                     onChange={handleHairLengthChange}
                 /> 
             </label>
-            <label htmlFor="date">
-                What's the date today?
-                <input
-                    type="text"
-                    placeholder="What is Today"
-                    value={date}
-                    onChange={handleDateChange}
-                />
-            </label>
+            
             <label htmlFor="goalLength">
                 What's your goal length in cm?
                 <input
                     type="number"
-                    placeholder="Hair Goal Length in cm Please"
+                    placeholder="Goal Length in cm"
                     value={goalHairLength}
                     onChange={handleGoalHairLengthChange}
                 /> 
             </label>
-            <button>Submit</button>                                  
+            <button>See your hair future...<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button>                                  
         </form>
         <UserData/>
         </div>
