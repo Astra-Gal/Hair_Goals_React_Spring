@@ -64,7 +64,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
         <div className="form-wrapper">
         <form onSubmit={handleFormSubmit}>
             <label htmlFor="name">
-                What's your name?
+                What's your name?<br/>
                 <input
                     type="text"
                     placeholder="Name Please!"
@@ -91,7 +91,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
                     onChange={handleGoalHairLengthChange}
                 /> 
             </label>
-            <button>Submit<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button>                                  
+            <button>See your hair future...<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button>                                  
         </form>
         <UserData/>
         </div>

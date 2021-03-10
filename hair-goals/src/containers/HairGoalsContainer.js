@@ -58,7 +58,7 @@ const HairGoalsContainer = () => {
         const request = new Request();
         request.patch("/users/" + user.id, user)
         .then(() => {
-            window.location = "/users/" + user.id; // we don't currently have a /users/ path
+            window.location = "/edit-details/" + user.id; // we don't currently have a /users/ path
         })
     }
     

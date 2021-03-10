@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+
 html {
   box-sizing: border-box;
 }
@@ -15,16 +18,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(248, 246, 239);
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .logo {
   display: flex;
+  font-family: 'Rock Salt', sans-serif;
+  color: #08837f;
   justify-content: center;
+  color:black;
+}
+h1 {
+  text-shadow: rgb(248, 246, 239);
+  
+}
+
+.welcome {
+  text-align: center;
+  color: rgb(45, 58, 119);
 }
 
 ul {
@@ -36,6 +50,7 @@ ul {
   justify-content: space-between;
   border: dotted turquoise;
   padding: 10px;
+  background: white;
 }
 
 .navbar > li {
@@ -63,7 +78,9 @@ form {
 }
 label {
   display: flex;
+  font-size: 0.8em;;
   padding: 5x;
+  margin: 5px;
   align-items: center;
   justify-content: space-between;
 }
@@ -73,7 +90,17 @@ input {
   border-radius: 3px;
   border: none;
   box-shadow: -1px -1px 4px rgba(3, 82, 71, 0.2);
+  transition-duration: 0.5s;
 }
+
+input:hover{
+  box-shadow: -1px -1px 4px mediumaquamarine;
+}
+input:focus{
+  box-shadow: -1px -1px 5px fuchsia;
+  outline: none;
+}
+
 button {
   display: flex;
   align-items: center;
@@ -81,14 +108,24 @@ button {
   background: rgb(150, 121, 167);
   color: aliceblue;
   border: 0;
-  outline: 0;
+  outline: none;
   padding: 0;
   border-radius: 3px;
-  margin: 5px;
+  margin: 20px 2px 8px 2px;
   font-family: inherit;
   font-size: 1em;
+  font-weight: bold;
+  transition-duration: 0.7s;
 }
 
-svg {
-  fill: aliceblue;
+button:hover {
+  background: linear-gradient(45deg, turquoise, fuchsia);
+  transition-duration: 0.4s;
 }
+
+
+
+svg {
+  fill: rgb(252, 252, 252);
+}
+
