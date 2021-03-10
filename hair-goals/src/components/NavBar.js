@@ -3,12 +3,17 @@ import {Link} from 'react-router-dom';
 
 
 
-const NavBar = ({users, user, loaded}) => {
+const NavBar = ({user}) => {
 
-    const ExistingUserNavBar = (user) => {
-        return  <li>
-                        <Link to='/edit-details' className="navlink">Hi {user.name}, edit your details</Link>
+    const ExistingUserNavBar = () => {
+        return  (<>
+                <li>
+                        <Link to='/edit-details' className="navlink">Edit measurements</Link>
                 </li> 
+                <li>
+                        <Link to='/add-measurements' className="navlink">Add new measurement</Link>
+                </li>
+                </>)
                
     
     }
@@ -20,8 +25,8 @@ const NavBar = ({users, user, loaded}) => {
     
     }
     
-    const CustomUserNavBar = (users, loaded) => {
-        if (loaded && users.length > 0){
+    const CustomUserNavBar = () => {
+        if (user){
             return <ExistingUserNavBar/>;
         }else{
         return <GuestUserNavBar/>

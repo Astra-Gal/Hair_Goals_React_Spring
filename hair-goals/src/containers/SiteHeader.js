@@ -3,16 +3,16 @@ import Logo from '../components/Logo';
 import NavBar from '../components/NavBar';
 
 
-const SiteHeader = ({users, user, loaded}) => {
-    if (loaded ){console.log("Site Header", user)}
+const SiteHeader = () => {
+ 
     return (
         <>
         
-        <NavBar 
+        {/* <NavBar 
         user={user}
         users={users}
         loaded={loaded}
-        />
+        /> */}
         <Logo/>
         </>
     )
