@@ -8,6 +8,8 @@ import EditDetails from '../components/EditDetails';
 import AddMeasurement from '../components/AddMeasurement';
 import ErrorPage from '../components/ErrorPage';
 import Request from '../helpers/Request';
+import About from '../components/About';
+import Guide from '../components/Guide';
 
 
 
@@ -86,6 +88,8 @@ const HairGoalsContainer = () => {
                     }} />
                     <Route path="/add-measurement" component={AddMeasurement}/>
                     <Route path="/edit-details" component={EditDetails}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/guide" component={Guide}/>
                     <Route component={ErrorPage}/>
                 </Switch>
 

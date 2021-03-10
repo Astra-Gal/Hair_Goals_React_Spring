@@ -1,7 +1,6 @@
 package com.codeclan.example.hair_goals_backend;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.tools.javah.Gen;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -30,6 +29,9 @@ public class User {
     @Column(name = "time_till_goal")
     private Integer timeTillGoal;
 
+    @Column(name= "key_lengths")
+    private KeyLengths keyLength;
+
     @JsonIgnoreProperties(value = "user")
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Measurement> measurements;
@@ -40,10 +42,39 @@ public class User {
         this.goalHairLength = goalHairLength;
         this.growthRate = 1;
         this.timeTillGoal = 0;
+        this.keyLength = null;
         this.measurements = new ArrayList<Measurement>();
     }
 
     public User() {}
+
+    public KeyLengths getKeyLength() {
+      return this.keyLength;
+    }
+
+    public void setKeyLength(){
+       if(getHairLength() >= 150){
+            this.keyLength = KeyLengths.TOES;
+        }
+        else if(getHairLength() >= 100){
+            this.keyLength = KeyLengths.KNEES;
+        }
+        else if(getHairLength() >= 75){
+            this.keyLength = KeyLengths.WAIST;
+        }
+        else if(getHairLength() >= 30){
+            this.keyLength = KeyLengths.SHOULDER;
+        }
+        else if(getHairLength() >= 20){
+            this.keyLength = KeyLengths.BOB;
+        }
+        else if(getHairLength() >= 6){
+            this.keyLength = KeyLengths.SHORT;
+        }
+
+
+    }
+
 
     public Long getId() {
         return id;

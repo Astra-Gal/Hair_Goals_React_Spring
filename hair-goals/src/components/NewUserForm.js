@@ -59,12 +59,14 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 growthRate: 1,
                 date: dateToSubmit,
                 goalHairLength: goalHairLengthToSubmit, 
+                keyLength: null
             });           
 
             setName("");
             setHairLength(0);
             setDate("");
             setGoalHairLength(0);
+        
         } 
     }
 
