@@ -3,7 +3,7 @@ import React from 'react';
 const UserData = ({user}) => {
 
     if (!user){
-      return "Hawd on!!!!"
+      return ""
     }
 
   

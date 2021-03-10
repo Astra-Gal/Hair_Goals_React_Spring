@@ -5,8 +5,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
 
-    const [date, setDate] = useState("");
-
     const [hairLength, setHairLength] = useState(0);
 
     const [goalHairLength, setGoalHairLength] = useState("");
@@ -19,9 +17,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         setHairLength(evt.target.value);
     }
 
-    const handleDateChange = (evt) => {
-        setDate(evt.target.value);
-    }
 
     const handleGoalHairLengthChange = (evt) => {
         setGoalHairLength(evt.target.value);
@@ -32,7 +27,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
         evt.preventDefault();
         const nameToSubmit = name.trim();
         const hairLengthToSubmit = hairLength;
-        const dateToSubmit = date.trim(); // might need to reformat date
         const goalHairLengthToSubmit = goalHairLength;
         
 
@@ -42,9 +36,6 @@ const NewUserForm = ({onNewUserSubmit}) => {
             proceed = false
         } 
         if(!hairLengthToSubmit){
-            proceed = false
-        }
-        if(!dateToSubmit){
             proceed = false
         }
         if(!goalHairLengthToSubmit){
@@ -57,13 +48,11 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
                 growthRate: 1,
-                date: dateToSubmit,
                 goalHairLength: goalHairLengthToSubmit, 
             });           
 
             setName("");
             setHairLength(0);
-            setDate("");
             setGoalHairLength(0);
         } 
     }
@@ -84,7 +73,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
                 />
             </label>
             <label htmlFor="hairLength">
-                What's your current hair length in cm?
+                What's your hair length in cm?
                 <input
                     type="number"
                     placeholder="Your Hair Length in cm Please"
@@ -92,15 +81,7 @@ const NewUserForm = ({onNewUserSubmit}) => {
                     onChange={handleHairLengthChange}
                 /> 
             </label>
-            <label htmlFor="date">
-                What's the date today?
-                <input
-                    type="text"
-                    placeholder="What is Today"
-                    value={date}
-                    onChange={handleDateChange}
-                />
-            </label>
+            
             <label htmlFor="goalLength">
                 What's your goal length in cm?
                 <input
