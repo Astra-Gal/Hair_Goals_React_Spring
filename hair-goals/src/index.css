@@ -33,7 +33,6 @@ h1 {
   text-shadow: rgb(248, 246, 239);
 }
 
-
 .welcome {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
@@ -42,9 +41,20 @@ h1 {
 }
 .wrapper {
   display: flex;
-  width: 100vw;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60vw;
+  margin-left: 20vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-wrapper {
+  display: flex;
+  width: 400px;
   justify-content: center;
 }
+
 .testhorse {
   width: 300px;
   justify-content: center;
@@ -77,9 +87,12 @@ ul {
   text-decoration: none;
 }
 
+.button-link {
+  text-decoration: none;
+}
+
 .form-wrapper {
   display: flex;
-  box-shadow: -1px -1px 4px rgba(4, 156, 136, 0.2);
   padding: 10px;
   width: 60vw;
   margin-left: 20vw;
@@ -112,7 +125,7 @@ input {
 }
 
 input:hover{
-  box-shadow: -1px -1px 4px mediumaquamarine;
+  box-shadow: -1px -1px 5px mediumaquamarine;
 }
 input:focus{
   box-shadow: -1px -1px 5px fuchsia;
@@ -124,11 +137,13 @@ button {
   align-items: center;
   justify-content: space-around;
   background: rgb(150, 121, 167);
-  color: aliceblue;
+  color: white;
+  text-decoration: none;
   border: 0;
   outline: none;
   padding: 0;
   border-radius: 3px;
+  min-width: 220px;
   margin: 20px 2px 8px 2px;
   font-family: inherit;
   font-size: 1em;

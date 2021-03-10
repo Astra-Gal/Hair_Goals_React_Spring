@@ -10,8 +10,7 @@ const NavBar = ({user}) => {
                         <Link to='/add-measurements' className="navlink">Add new measurement</Link>
                 </li>
                 </>)
-               
-    
+            
     }
     const GuestUserNavBar = () => {
         return  <li>
