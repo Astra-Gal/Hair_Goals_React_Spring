@@ -48,7 +48,7 @@ const HairGoalsContainer = () => {
     const handleCreate = function(user){
         const request = new Request();
         request.post("/users", user)
-        .then(() => window.locaion = "/user-details") // eventually it should take us
+        .then(() => window.location = "/user-details/1") // eventually it should take us
     // somewhere with the user's id, like...
     // .then(() => window.location = "/user-details/" + user.id)
     // but user maybe hasn't loaded at this point, so it can't get the id of undefined
@@ -73,7 +73,7 @@ const HairGoalsContainer = () => {
     return (
         <Router>
             <>
-            <SiteHeader/>                
+            <SiteHeader users={users}/>                
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
                     <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>

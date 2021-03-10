@@ -3,11 +3,11 @@ import Logo from '../components/Logo';
 import NavBar from '../components/NavBar';
 
 
-const SiteHeader = () => {
+const SiteHeader = ({users}) => {
     return (
         <>
         
-        <NavBar/>
+        <NavBar users={users}/>
         <Logo/>
         </>
     )
