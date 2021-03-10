@@ -1,10 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
-
-
 const NavBar = ({user}) => {
-
     const ExistingUserNavBar = () => {
         return  (<>
                 <li>
@@ -33,11 +29,8 @@ const NavBar = ({user}) => {
     
     }
 }
-
  
-
     return (
-
         <ul className="navbar">
         <li>
             <Link to="/" className="navlink">Home</Link>
@@ -46,12 +39,18 @@ const NavBar = ({user}) => {
         <li>
             <Link to='/user-details' className="navlink">My Details</Link>
         </li>
+        <li>
+                <Link to='/about' className="navlink">About us</Link>
+            </li>
+            <li>
+                <Link to='/guide' classname="navlink">A quick how to</Link>
+            </li>
+        
         
     </ul>
     
     )
 }
-
 // const NavBar = ({users}) => {
 //     if(!users){
 //         return null;
@@ -73,7 +72,4 @@ const NavBar = ({user}) => {
 //         </div>
 //     )
 // }
-
-
-
 export default NavBar;

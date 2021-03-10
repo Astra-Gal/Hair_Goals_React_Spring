@@ -20,7 +20,7 @@ public class Measurement {
 
     @JsonIgnoreProperties(value = "measurements")
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
     public Measurement(Integer length, String dateMeasured, User user) {
@@ -38,7 +38,6 @@ public class Measurement {
     public void setUser(User user) {
         this.user = user;
     }
-
     public Long getId() {
         return id;
     }

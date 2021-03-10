@@ -8,14 +8,15 @@ import EditDetails from '../components/EditDetails';
 import AddMeasurement from '../components/AddMeasurement';
 import ErrorPage from '../components/ErrorPage';
 import Request from '../helpers/Request';
-// import NavBar from '../components/NavBar';
+import About from '../components/About';
+import Guide from '../components/Guide';
 
 
 
 const HairGoalsContainer = () => {
 
     const [users, setUsers] = useState([]);
-    // const [measurements, setMeasurements] = useState([]);
+    const [measurements, setMeasurements] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
     const getAllUsers = () => {
@@ -26,11 +27,21 @@ const HairGoalsContainer = () => {
         .then(() => setLoaded(true))
         .catch(err => console.error);  
     }
+
+    const getMeasurements = () => {
+        console.log("Running getMeasurements");
+        fetch('/measurements')
+        .then(res => res.json())
+        .then(data => setMeasurements(data))
+    }
     
     useEffect(() => {
         getAllUsers();
-    }, [setUsers])
-    console.log(users);
+    }, [setUsers]);
+
+    useEffect(() => {
+        getMeasurements();
+    }, [setMeasurements]);
 
     const findUserById = function(id){
         return users.find((user) => {
@@ -45,7 +56,6 @@ const HairGoalsContainer = () => {
         .then(() => window.location = "/user-details")
     }
     
-
     const handleCreate = function(user){
         const request = new Request();
         request.post("/users", user)
@@ -63,6 +73,15 @@ const HairGoalsContainer = () => {
         })
     }
     
+    const handleAddMeasurement = function(measurement){
+        console.log("Running handleAddMeasurement")
+        const request = new Request();
+        request.post("/measurements", measurement)
+        // const request2 = new Request();
+        // request2.patch("/users/1", user)
+        // .then(() => window.location = "/user-details/1")
+    }
+
 
     if(!users){
         return null;
@@ -92,8 +111,10 @@ const HairGoalsContainer = () => {
                         onDelete={handleDelete}
                         />
                     }} />
-                    <Route path="/add-measurement" component={AddMeasurement}/>
+                    <Route path="/add-measurement" render={() => <AddMeasurement onNewAddedMeasurement={handleAddMeasurement}/>}/>
                     <Route path="/edit-details" component={EditDetails}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/guide" component={Guide}/>
                     <Route component={ErrorPage}/>
                 </Switch>
 

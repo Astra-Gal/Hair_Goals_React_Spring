@@ -1,10 +1,76 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavBar from './NavBar';
 
-const AddMeasurement = () => {
+const AddMeasurement = ({onNewAddedMeasurement}) => {
+    
+    const [length, setLength] = useState("");
+
+    const [dateMeasured, setDateMeasured] = useState ("")
+
+    const handleLengthChange = (evt) => {
+        setLength(evt.target.value);
+    }
+
+    const handleDateMeasuredChange = (evt) => {
+        setDateMeasured(evt.target.value);
+    }
+
+    const handleMeasurementSubmit = (evt) => {
+        console.log("Running handleMeasurementSubmit")
+        evt.preventDefault();
+        const lengthToSubmit = length;
+        const dateMeasuredToSubmit = dateMeasured;
+
+
+        let proceed = true;
+
+        if(!length){
+            proceed = false
+        } 
+
+        if(!dateMeasured){
+            proceed = false
+        } 
+
+        if (proceed === true){
+            onNewAddedMeasurement ({
+                length: lengthToSubmit,
+                dateMeasured: dateMeasuredToSubmit,
+                user_id: 1
+            });
+
+            setLength("");
+            setDateMeasured("")
+        }
+    }
+
     return (
         <>
-        <h4>I am where you add measurements</h4>
+            <form onSubmit={handleMeasurementSubmit}>
+
+                <label htmlFor="length">
+                    Add your updated hair length (in cm)
+                    <input 
+                        type="number" 
+                        placeholder="Measurement in cm"
+                        value={length}
+                        onChange={handleLengthChange}/>
+                </label>
+                <br/>
+                <br/>
+                <label htmlFor="date">
+                    What was that measurement taken?
+                    <input 
+                        type="text" 
+                        placeholder="dd/mm/yyyy"
+                        value={dateMeasured}
+                        onChange={handleDateMeasuredChange}/>
+                </label>
+                <br/>
+                <br/>
+                <button>Submit</button>
+
+            </form>
         </>
     )
 }

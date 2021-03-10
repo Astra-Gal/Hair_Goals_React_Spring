@@ -24,6 +24,7 @@ public class UserController {
     @PostMapping(value = "/users")
     public ResponseEntity<User> createUser(@RequestBody User user) {
         user.setTimeTillGoal();
+        user.setKeyLength();
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
