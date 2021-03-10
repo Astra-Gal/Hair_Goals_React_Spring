@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
+import UserData from './UserData';
 
-const Form = ({onNewUserSubmit}) => {
+const NewUserForm = ({onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
+   
+    const [date, setDate] = useState("");
 
     const [hairLength, setHairLength] = useState(0);
 
-    const [date, setDate] = useState("");
-
-    const [birthday, setBirthday] = useState("");
+    // const [birthday, setBirthday] = useState("");
 
     const [goalHairLength, setGoalHairLength] = useState("");
 
@@ -24,9 +25,9 @@ const Form = ({onNewUserSubmit}) => {
         setDate(evt.target.value);
     }
 
-    const handleBirthdayChange = (evt) => {
-        setBirthday(evt.target.value);
-    }
+    // const handleBirthdayChange = (evt) => {
+    //     setBirthday(evt.target.value);
+    // }
 
     const handleGoalHairLengthChange = (evt) => {
         setGoalHairLength(evt.target.value);
@@ -38,8 +39,9 @@ const Form = ({onNewUserSubmit}) => {
         const nameToSubmit = name.trim();
         const hairLengthToSubmit = hairLength;
         const dateToSubmit = date.trim(); // might need to reformat date
-        const birthdayToSubmit = birthday.trim();
+        // const birthdayToSubmit = birthday.trim();
         const goalHairLengthToSubmit = goalHairLength;
+        
 
         let proceed = true;
 
@@ -52,9 +54,9 @@ const Form = ({onNewUserSubmit}) => {
         if(!dateToSubmit){
             proceed = false
         }
-        if(!birthdayToSubmit){
-            proceed = false
-        }
+        // if(!birthdayToSubmit){
+        //     proceed = false
+        // }
         if(!goalHairLengthToSubmit){
             proceed = false
         }
@@ -64,15 +66,17 @@ const Form = ({onNewUserSubmit}) => {
             onNewUserSubmit({
                 name: nameToSubmit,
                 hairLength: hairLengthToSubmit,
-                date: dateToSubmit,
-                birthday: birthdayToSubmit,
-                goalHairLength: goalHairLengthToSubmit               
+                growthRate: 1,
+                // date: dateToSubmit,
+                // birthday: birthdayToSubmit,
+                goalHairLength: goalHairLengthToSubmit, 
+                // timeTillGoal: ((goalHairLength - hairLength) / growthRate)
             });           
 
             setName("");
             setHairLength(0);
             setDate("");
-            setBirthday("");
+            // setBirthday("");
             setGoalHairLength(0);
         } 
     }
@@ -81,6 +85,7 @@ const Form = ({onNewUserSubmit}) => {
 
 
     return (
+        <>
         <form onSubmit={handleFormSubmit}>
             <input
             type="text"
@@ -100,15 +105,15 @@ const Form = ({onNewUserSubmit}) => {
             value={date}
             onChange={handleDateChange}
             />
-            <input
+            {/* <input
             type="text"
             placeholder="Your Birthday Please"
             value={birthday}
             onChange={handleBirthdayChange}
-            /> 
+            />  */}
             <input
             type="number"
-            placeholder="Hair Goal Length in cm"
+            placeholder="Hair Goal Length in cm Please"
             value={goalHairLength}
             onChange={handleGoalHairLengthChange}
             /> 
@@ -116,6 +121,8 @@ const Form = ({onNewUserSubmit}) => {
                 type="Submit"
             />                                   
         </form>
+        <UserData/>
+        </>
     )
 }
 
@@ -123,4 +130,4 @@ const Form = ({onNewUserSubmit}) => {
 
 
 
-export default Form;
+export default NewUserForm;

@@ -2,7 +2,7 @@ import React, {useEffect, useState}from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SiteHeader from './SiteHeader';
 import Welcome from '../components/Welcome';
-import Form from '../components/Form';
+import NewUserForm from '../components/NewUserForm';
 import UserData from '../components/UserData';
 import EditDetails from '../components/EditDetails';
 import AddMeasurement from '../components/AddMeasurement';
@@ -63,6 +63,9 @@ const HairGoalsContainer = () => {
     if(!users){
         return null;
     }
+    if(!loaded){
+        return null;
+    }
 
     return (
         <Router>
@@ -70,8 +73,14 @@ const HairGoalsContainer = () => {
             <SiteHeader/>                
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
-                    <Route path="/new-user" render={() => <Form onNewUserSubmit={handleCreate}/>}/>
-                    <Route path="/user-details" component={UserData}/>
+                    <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>
+                    <Route exact path="/user-details/:id" render={(props) =>{
+                        const id = props.match.params.id;
+                        const user = findUserById(id);
+                        return <UserData user={user}
+                        onDelete={handleDelete}
+                        />
+                    }} />
                     <Route path="/add-measurement" component={AddMeasurement}/>
                     <Route path="/edit-details" component={EditDetails}/>
                     <Route component={ErrorPage}/>
@@ -83,19 +92,3 @@ const HairGoalsContainer = () => {
 }
 
 export default HairGoalsContainer;
-// const request = new Request();
-// const userPromise = request.get('/api/users');
-// const measurementPromise = request.get('/api/measurements');
-
-// Promise.all(userPromise)
-// .then((data) => setUsers(data))
-// .then(() => setLoaded(true))
-// .catch(err => console.error);
-
-// const addNewUser = (newUser) => {
-//     newUser.id = Date.now(); // eventually this id will come from db
-//     const updatedUsers = [...users, newUser];
-//     setUsers(updatedUsers);
-// }
-
-{/* <Route path="/new-user" render={() => <Form onNewUserSubmit={(user) => addNewUser(user)}/>}/> */}
