@@ -8,6 +8,7 @@ import EditDetails from '../components/EditDetails';
 import AddMeasurement from '../components/AddMeasurement';
 import ErrorPage from '../components/ErrorPage';
 import Request from '../helpers/Request';
+// import NavBar from '../components/NavBar';
 
 
 
@@ -67,7 +68,7 @@ const HairGoalsContainer = () => {
         const request = new Request();
         request.patch("/users/" + user.id, user)
         .then(() => {
-            window.location = "/users/" + user.id; // we don't currently have a /users/ path
+            window.location = "/edit-details/" + user.id; // we don't currently have a /users/ path
         })
     }
     
@@ -91,7 +92,14 @@ const HairGoalsContainer = () => {
     return (
         <Router>
             <>
-            <SiteHeader users={users}/>                
+            <SiteHeader users={users} loaded={loaded}
+        //     render={(props) =>{
+        //         const id = props.match.params.id;
+        //         const user = findUserById(id);
+        //         return <SiteHeader user={user}
+        //     />  
+        // }}
+         />              
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
                     <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>

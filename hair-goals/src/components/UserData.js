@@ -1,9 +1,10 @@
 import React from 'react';
+import NavBar from './NavBar';
 
 const UserData = ({user}) => {
 
     if (!user){
-      return "Hawd on!!!!"
+      return ""
     }
 
   
@@ -15,6 +16,7 @@ const UserData = ({user}) => {
 
 
       <>
+        <NavBar user={user}/>
         <h2>Congratulations, {user.name}!</h2>
         <ul>
           {userMeasurements}
