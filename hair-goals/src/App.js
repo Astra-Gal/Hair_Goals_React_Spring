@@ -1,6 +1,6 @@
 import React from 'react';
 import HairGoalsContainer from './containers/HairGoalsContainer';
-// import './App.css';
+import './App.css';
 
 
 
@@ -9,9 +9,9 @@ import HairGoalsContainer from './containers/HairGoalsContainer';
 function App() {
   return (
     
-    <>
+    <div className="apphouse">
       <HairGoalsContainer/>
-    </>
+    </div>
     
   )
 }

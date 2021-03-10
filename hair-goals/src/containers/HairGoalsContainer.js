@@ -1,6 +1,6 @@
 import React, {useEffect, useState}from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import SiteHeader from './SiteHeader';
+// import SiteHeader from '../deprecated/SiteHeader';
 import Welcome from '../components/Welcome';
 import NewUserForm from '../components/NewUserForm';
 import UserData from '../components/UserData';
@@ -93,14 +93,6 @@ const HairGoalsContainer = () => {
     return (
         <Router>
             <>
-            <SiteHeader users={users} loaded={loaded}
-        //     render={(props) =>{
-        //         const id = props.match.params.id;
-        //         const user = findUserById(id);
-        //         return <SiteHeader user={user}
-        //     />  
-        // }}
-         />              
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
                     <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>

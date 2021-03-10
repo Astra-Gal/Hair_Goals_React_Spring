@@ -29,7 +29,7 @@ const NavBar = ({user}) => {
     
     }
 }
- 
+
     return (
         <ul className="navbar">
         <li>

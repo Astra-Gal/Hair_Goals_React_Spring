@@ -1,12 +1,14 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Logo from './Logo';
 
 const Welcome = () => {
     return (
         
         <>
         <NavBar/>
-        <h2 className="welcome">Let's grow together...</h2>
+        <Logo/>
+        <h2 className="welcome">... let's grow together!</h2>
     
         </>
     );
