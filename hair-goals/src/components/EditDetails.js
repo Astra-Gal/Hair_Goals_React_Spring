@@ -1,6 +1,7 @@
 import React from 'react';
+import NavBar from './NavBar';
 
-const EditDetails = () => {
+const EditDetails = ({onUpdated}) => {
     return (
         <>
         <h5>Edit your details HERE!!!!!!!</h5>

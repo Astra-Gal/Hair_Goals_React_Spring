@@ -43,7 +43,7 @@ const NavBar = ({user}) => {
                 <Link to='/about' className="navlink">About us</Link>
             </li>
             <li>
-                <Link to='/guide' classname="navlink">A quick how to</Link>
+                <Link to='/guide' className="navlink">A quick how to</Link>
             </li>
         
         
