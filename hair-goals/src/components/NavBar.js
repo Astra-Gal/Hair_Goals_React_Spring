@@ -39,19 +39,6 @@ const NavBar = ({user}) => {
     return (
 
         <ul className="navbar">
-<<<<<<< HEAD
-            <li>
-                <Link to="/" className="navlink">Home</Link>
-            </li>
-            <li>
-                <Link to='/new-user' className="navlink">Enter your hair future!</Link>
-            </li> 
-            <li>
-                <Link to='/user-details' className="navlink">My Details</Link>
-            </li>
-        </ul>
-        </div>
-=======
         <li>
             <Link to="/" className="navlink">Home</Link>
         </li>
@@ -62,7 +49,6 @@ const NavBar = ({user}) => {
         
     </ul>
     
->>>>>>> develop
     )
 }
 

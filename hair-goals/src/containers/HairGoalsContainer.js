@@ -81,7 +81,7 @@ const HairGoalsContainer = () => {
         //         return <SiteHeader user={user}
         //     />  
         // }}
-         />              
+        />              
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
                     <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>
