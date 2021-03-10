@@ -11,6 +11,11 @@ import java.util.List;
 public class MeasurementController {
     @Autowired
     MeasurementRepository measurementRepository;
+
+    @Autowired
+    UserRepository userRepository;
+
+
     @GetMapping(value = "/measurements")
     public ResponseEntity<List<Measurement>> getAllMeasurements(){
         return new ResponseEntity<>(measurementRepository.findAll(), HttpStatus.OK);
