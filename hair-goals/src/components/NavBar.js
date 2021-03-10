@@ -3,19 +3,25 @@ import {Link} from 'react-router-dom';
 
 
 
-const NavBar = () => {
+const NavBar = ({users}) => {
+    if(!users){
+        return null;
+    }
     return (
+        <div>
         <ul className="navbar">
             <li>
                 <Link to="/" className="navlink">Home</Link>
             </li>
-            <li>
-                <Link to='/new-user' className="navlink">New Here? Sign Up!</Link>
-            </li> 
+            {users.length >= 1 ? (<li>
+                <Link to='/new-user' className="navlink">Enter your hair future!</Link>
+            </li> )  : <p>Welcome {users[0].name}</p>}
+            
             <li>
                 <Link to='/user-details' className="navlink">My Details</Link>
             </li>
         </ul>
+        </div>
     )
 }
 

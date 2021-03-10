@@ -38,3 +38,7 @@ ul {
   text-decoration: none;
 }
 
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}

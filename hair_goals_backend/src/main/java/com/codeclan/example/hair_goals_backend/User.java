@@ -18,9 +18,6 @@ public class User {
     @Column(name = "name")
     private String name;
 
-//    @Column(name = "birthday")
-//    private String birthday;
-
     @Column(name = "hair_length")
     private Integer hairLength;
 
