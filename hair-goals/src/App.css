@@ -1,5 +1,7 @@
 .apphouse {
   background-image:  url('./assets/hare.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   min-width: 100%;
   min-height: 100%;
