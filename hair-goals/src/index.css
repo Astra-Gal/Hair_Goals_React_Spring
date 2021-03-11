@@ -78,7 +78,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: dotted 1px #F2F6D0;
   font-weight: bold;
   padding: 10px;
   background:transparent 10%;
@@ -173,6 +172,7 @@ svg {
 @media only screen and (min-width: 450px) {
   .navbar {
     flex-direction: row;
+    border: dotted 1px #F2F6D0;
   }
 
 }
