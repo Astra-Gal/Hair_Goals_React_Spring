@@ -44,7 +44,7 @@ const UserData = ({theOneUser}) => {
         Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
         <p>Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!</p>
 
-        <Link to='/add-measurement' className="buttonlink"><button>Add Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
+        <Link to='/add-measurement' className="button-link"><button>Add Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
 
   </div>
   </div>
@@ -69,7 +69,7 @@ const UserData = ({theOneUser}) => {
         Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
         <p>Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!</p>
 
-        <Link to='/add-measurement' className="buttonlink"><button>Add Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
+        <Link to='/add-measurement' className="button-link"><button>Add Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
 
         </div>
         </div>
