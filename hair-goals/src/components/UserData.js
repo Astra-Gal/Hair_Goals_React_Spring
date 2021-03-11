@@ -36,13 +36,13 @@ const UserData = ({theOneUser}) => {
         <ul>
           {userMeasurements}
         </ul>
-        <p>You've just embarked on a magical hair journey! Let's Grow Together</p>
+        <p>You've just embarked on a magical hair journey! 
         
-        <p> Your hair length is {latestMeasurement}cm. Good Growing!</p>
+        Your hair length is {latestMeasurement}cm. Good Growing!</p>
 
-        <p>You want to grow to {theOneUser.goalHairLength}cm. You Rapunzel you.</p>
-        <p>Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
-        <p>"Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!"</p>
+        <p>You want to grow to {theOneUser.goalHairLength}cm (you Rapunzel, you!)
+        Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
+        <p>Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!</p>
 
         <Link to='/add-measurement' className="navlink"><button>Add Measurement</button></Link>
 
@@ -62,13 +62,12 @@ const UserData = ({theOneUser}) => {
 
         <h2>Congratulations, {theOneUser.name}!</h2>
 
-        <p>You've just embarked on a magical hair journey! Let's Grow Together</p> 
-        <p> Your starting hair length is {theOneUser.hairLength}cm. Good Growing!</p>
+        <p>You've just embarked on a magical hair journey! Your starting hair length is {theOneUser.hairLength}cm. Good Growing!</p>
 
 
-        <p>You want to grow to {theOneUser.goalHairLength}cm. You Rapunzel you.</p>
-        <p>Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
-        <p>"Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!"</p>
+        <p>You want to grow to {theOneUser.goalHairLength}cm (you Rapunzel, you!)
+        Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
+        <p>Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!</p>
 
         <Link to='/add-measurement' className="navlink"><button>Add Measurement</button></Link>
 
