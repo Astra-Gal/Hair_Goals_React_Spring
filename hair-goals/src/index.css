@@ -59,7 +59,13 @@ p{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(5px); 
+  border-radius: 3px;
+  height: 100vh;
+	width: 60%;
   overflow: auto;
 }
 
@@ -173,6 +179,10 @@ svg {
   .navbar {
     flex-direction: row;
     border: dotted 1px #F2F6D0;
+  }
+  .inner-wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: 8px;
   }
 
 }
