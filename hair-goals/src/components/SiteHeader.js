@@ -3,13 +3,13 @@ import Logo from '../components/Logo';
 import NavBar from '../components/NavBar';
 
 
-const SiteHeader = ({users, loaded}) => {
+const SiteHeader = ({theOneUser, loaded}) => {
  
     return (
         <>
         
         <NavBar 
-        users={users}
+        theOneUser={theOneUser}
         loaded={loaded}
         />
         <Logo/>

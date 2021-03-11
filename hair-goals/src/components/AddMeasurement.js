@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 // import NavBar from './NavBar';
 
-const AddMeasurement = ({onNewAddedMeasurement}) => {
+const AddMeasurement = ({theOneUser, loaded, onNewAddedMeasurement}) => {
     
     const [length, setLength] = useState("");
 
@@ -36,8 +36,9 @@ const AddMeasurement = ({onNewAddedMeasurement}) => {
             onNewAddedMeasurement ({
                 length: lengthToSubmit,
                 dateMeasured: dateMeasuredToSubmit,
-                user_id: 1
-            });
+                user: theOneUser
+            })
+            console.log(onNewAddedMeasurement);
 
             setLength("");
             setDateMeasured("")

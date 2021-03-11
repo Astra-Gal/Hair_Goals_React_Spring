@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import UserData from './UserData';
+
 
 const NewUserForm = ({theOneUser, onNewUserSubmit}) => {
 
@@ -65,7 +65,6 @@ const NewUserForm = ({theOneUser, onNewUserSubmit}) => {
 if (!theOneUser){
     return (
         <>
-        {/* <NavBar/> */}
         <div className="form-wrapper">
             
         <form onSubmit={handleFormSubmit}>
@@ -74,6 +73,7 @@ if (!theOneUser){
                 <input
                     type="text"
                     placeholder="Name Please!"
+                    required="true"
                     value={name}
                     onChange={handleNameChange}
                 />
@@ -83,6 +83,7 @@ if (!theOneUser){
                 <input
                     type="number"
                     placeholder="Hair Length in cm"
+                    required="true"
                     value={hairLength}
                     onChange={handleHairLengthChange}
                 /> 
@@ -92,6 +93,7 @@ if (!theOneUser){
                 What's your goal length in cm?
                 <input
                     type="number"
+                    required="true"
                     placeholder="Goal Length in cm"
                     value={goalHairLength}
                     onChange={handleGoalHairLengthChange}

@@ -1,7 +1,5 @@
 html {
   box-sizing: border-box;
-  
-
 }
 
 *,
@@ -9,8 +7,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
-
 
 body {
   margin: 0;
@@ -31,16 +27,44 @@ code {
   color: rgb(149, 231, 223);
   justify-content: center;
 }
-h1 {
-  text-shadow: rgb(248, 246, 239);
+h1, h2 {
+  color: #f0f0f0;;
+  text-align: center;
 }
 
+p{
+  color: #f0f0f0;
+  margin: 5% 1.5em;
+  font-weight: bolder;
+}
 
 .welcome {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
   text-align: center;
   color: rgb(174, 228, 222);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 60vw;
+  margin-left: 20vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-wrapper {
+  display: flex;
+  width: 400px;
+  justify-content: center;
+}
+
+.testhorse {
+  width: 300px;
+  justify-content: center;
+  object-fit: cover;
+  position: relative;
 }
 
 ul {
@@ -51,7 +75,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: dotted 1px rgb(154, 230, 222);
+  border: dotted 1px #F2F6D0;
   font-weight: bold;
   padding: 10px;
   background:transparent 10%;
@@ -64,21 +88,28 @@ ul {
 }
 
 .navlink  {
-  color: turquoise;
+  color: #d8d5f1;
+  text-decoration: none;
+}
+
+.button-link {
   text-decoration: none;
 }
 
 .form-wrapper {
-  box-shadow: -1px -1px 4px rgba(4, 156, 136, 0.2);
+  display: flex;
   padding: 10px;
-  width: 70vw;
-  margin-left: 15vw;
+  width: 60vw;
+  margin-left: 20vw;
+  justify-content: center;
   border-radius: 3px;
   background: rgb(252, 252, 252);
 }
 
 form {
   display: flex;
+  width: 400px;
+  justify-content: center;
   flex-direction: column;
 }
 label {
@@ -99,7 +130,7 @@ input {
 }
 
 input:hover{
-  box-shadow: -1px -1px 4px mediumaquamarine;
+  box-shadow: -1px -1px 5px mediumaquamarine;
 }
 input:focus{
   box-shadow: -1px -1px 5px fuchsia;
@@ -111,11 +142,13 @@ button {
   align-items: center;
   justify-content: space-around;
   background: rgb(150, 121, 167);
-  color: aliceblue;
+  color: white;
+  text-decoration: none;
   border: 0;
   outline: none;
   padding: 0;
   border-radius: 3px;
+  min-width: 220px;
   margin: 20px 2px 8px 2px;
   font-family: inherit;
   font-size: 1em;
@@ -124,7 +157,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(45deg, turquoise, fuchsia);
+  background: linear-gradient(45deg, turquoise, #FF5964);
   transition-duration: 0.4s;
 }
 
