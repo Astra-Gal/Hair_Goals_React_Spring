@@ -1,13 +1,13 @@
 import React from 'react';
-import NavBar from './NavBar';
-import Logo from './Logo';
+// import NavBar from './NavBar';
+// import Logo from './Logo';
 
 const Welcome = () => {
     return (
         
         <>
-        <NavBar/>
-        <Logo/>
+        {/* <NavBar/> */}
+        {/* <Logo/> */}
         <h2 className="welcome">... let's grow together!</h2>
     
         </>

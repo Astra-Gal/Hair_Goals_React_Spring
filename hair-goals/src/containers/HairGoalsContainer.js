@@ -1,6 +1,6 @@
 import React, {useEffect, useState}from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-// import SiteHeader from '../deprecated/SiteHeader';
+import SiteHeader from '../components/SiteHeader';
 import Welcome from '../components/Welcome';
 import NewUserForm from '../components/NewUserForm';
 import UserData from '../components/UserData';
@@ -18,6 +18,7 @@ const HairGoalsContainer = () => {
     const [users, setUsers] = useState([]);
     const [measurements, setMeasurements] = useState([]);
     const [loaded, setLoaded] = useState(false);
+    const [bub, setBub] = useState('Rhiannon');
 
     const getAllUsers = () => {
         console.log("Keep your hair on! I'm fetching the users NOW!");
@@ -93,16 +94,11 @@ const HairGoalsContainer = () => {
     return (
         <Router>
             <>
+                <SiteHeader users={users} loaded={loaded} />
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
-                    <Route path="/new-user" render={() => <NewUserForm  onNewUserSubmit={handleCreate}/>}/>
-                    <Route exact path="/user-details/:id" render={(props) =>{
-                        const id = props.match.params.id;
-                        const user = findUserById(id);
-                        return <UserData user={user}
-                        onDelete={handleDelete}
-                        />
-                    }} />
+                    <Route path="/new-user" render={() => <NewUserForm theOneUser={users[0]} onNewUserSubmit={handleCreate}/>}/>
+                    <Route path="/user-details/1" render={() => <UserData theOneUser={users[0]} loaded={loaded}/>}/>
                     <Route path="/add-measurement" render={() => <AddMeasurement onNewAddedMeasurement={handleAddMeasurement}/>}/>
                     <Route path="/edit-details" component={EditDetails}/>
                     <Route path="/about" component={About}/>

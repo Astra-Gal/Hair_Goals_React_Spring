@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import UserData from './UserData';
 
-const NewUserForm = ({onNewUserSubmit}) => {
+const NewUserForm = ({theOneUser, onNewUserSubmit}) => {
 
     const [name, setName] = useState("");
 
@@ -61,9 +62,12 @@ const NewUserForm = ({onNewUserSubmit}) => {
 
 
 
-
+if (!theOneUser){
     return (
+        <>
+        {/* <NavBar/> */}
         <div className="form-wrapper">
+            
         <form onSubmit={handleFormSubmit}>
             <label htmlFor="name">
                 What's your name?<br/>
@@ -95,9 +99,19 @@ const NewUserForm = ({onNewUserSubmit}) => {
             </label>
             <button>See your hair future...<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button>                                  
         </form>
-        <UserData/>
         </div>
+        </>
     )
+    }
+
+return (
+    <>
+    <h1> YOU ALREADY CREATED A USER!!! </h1>
+
+    <Link to='/user-details/1' className="navlink"><button>SEE USER DETAILS HERE</button></Link>
+    </>
+)
+
 }
 
 

@@ -37,7 +37,7 @@ const NavBar = ({user}) => {
         </li>
         <CustomUserNavBar/>
         <li>
-            <Link to='/user-details' className="navlink">My Details</Link>
+            <Link to='/user-details/1' className="navlink">My Details</Link>
         </li>
         <li>
                 <Link to='/about' className="navlink">About us</Link>

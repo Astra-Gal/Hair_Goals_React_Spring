@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 
 
 const Guide = () => {
     return (
         <>
-        <NavBar/>
+        {/* <NavBar/> */}
         <h1>Measuring Guide</h1>
         <h2>Wanna Know how to measure those lushious locks?</h2>
         <p>

@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 
 
 const About = () => {
     return (
         <>
-        <NavBar/>
+        {/* <NavBar/> */}
         <h1>Hair Goals</h1>
         <h2>Keep track of your hair</h2>
         <p>
