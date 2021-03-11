@@ -18,7 +18,7 @@ const HairGoalsContainer = () => {
     const [users, setUsers] = useState([]);
     const [measurements, setMeasurements] = useState([]);
     const [loaded, setLoaded] = useState(false);
-    const [bub, setBub] = useState('Rhiannon');
+
 
     const getAllUsers = () => {
         console.log("Keep your hair on! I'm fetching the users NOW!");
@@ -94,7 +94,7 @@ const HairGoalsContainer = () => {
     return (
         <Router>
             <>
-                <SiteHeader users={users} loaded={loaded} />
+                <SiteHeader theOneUser={users[0]} loaded={loaded} />
                 <Switch>
                     <Route exact path="/" component={Welcome}/>
                     <Route path="/new-user" render={() => <NewUserForm theOneUser={users[0]} onNewUserSubmit={handleCreate}/>}/>
