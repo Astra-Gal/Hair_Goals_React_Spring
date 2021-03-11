@@ -15,6 +15,7 @@ public class MeasurementController {
     @Autowired
     UserRepository userRepository;
 
+    public User user;
 
     @GetMapping(value = "/measurements")
     public ResponseEntity<List<Measurement>> getAllMeasurements(){
@@ -27,6 +28,12 @@ public class MeasurementController {
     @PostMapping(value = "/measurements")
     public ResponseEntity<Measurement> createMeasurement(@RequestBody Measurement measurement){
         measurementRepository.save(measurement);
+        User user = measurement.getUser();
+        user.setHairLength(measurement.getLength());
+        user.setTimeTillGoal();
+        user.setKeyLength();
+//      measurement.getUser().setGrowthRate(measurement.getUser().getMeasurements()[-1].length - measurement.getUser().getMeasurements()[-2].length);
+        userRepository.save(user);
         return new ResponseEntity<>(measurement, HttpStatus.CREATED);
     }
     @PatchMapping(value = "/measurements/{id}")
