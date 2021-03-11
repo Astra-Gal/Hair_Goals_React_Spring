@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, ScrollView} from 'react';
 import {Link} from 'react-router-dom';
 
 
@@ -41,21 +41,22 @@ const UserData = ({theOneUser}) => {
         <p> Your hair length is {latestMeasurement}cm. Good Growing!</p>
 
         <p>You want to grow to {theOneUser.goalHairLength}cm. You Rapunzel you.</p>
-        <h4>Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</h4>
-        <p>"Your hair is {theOneUser.keyLength.toLowerCase()} length, Horah for you!"</p>
+        <p>Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
+        <p>"Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!"</p>
 
         <Link to='/add-measurement' className="navlink"><button>Add Measurement</button></Link>
 
-        </div>
-        </div>
+  </div>
+  </div>
         </>
     )
   }
 
-  if (theOneUser.measurements.length == 0){
+  if (theOneUser.measurements.length === 0){
     return (
 
       <>
+        
         <div className="wrapper">
         <div className="inner-wrapper">
 
@@ -66,8 +67,8 @@ const UserData = ({theOneUser}) => {
 
 
         <p>You want to grow to {theOneUser.goalHairLength}cm. You Rapunzel you.</p>
-        <h4>Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</h4>
-        <p>"Your hair is {theOneUser.keyLength.toLowerCase()} length, Horah for you!"</p>
+        <p>Based on the average human growth rate, you have {theOneUser.timeTillGoal} months till you meet your goal length</p>
+        <p>"Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!"</p>
 
         <Link to='/add-measurement' className="navlink"><button>Add Measurement</button></Link>
 
