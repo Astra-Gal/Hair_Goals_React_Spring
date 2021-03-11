@@ -18,7 +18,7 @@ const UserData = ({theOneUser}) => {
 
   
     const userMeasurements = theOneUser.measurements.map((measurement, index) => {
-      return <li key={index}> Date measured: {measurement.dateMeasured} - Length: {measurement.length}</li>
+      return <li key={index} className="measurelist"> Date measured: {measurement.dateMeasured} - Length: {measurement.length}</li>
     })
 
 

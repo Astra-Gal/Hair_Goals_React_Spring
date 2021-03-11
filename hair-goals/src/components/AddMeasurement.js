@@ -47,6 +47,7 @@ const AddMeasurement = ({theOneUser, loaded, onNewAddedMeasurement}) => {
 
     return (
         <>
+        <div className="form-wrapper">
             <form onSubmit={handleMeasurementSubmit}>
 
                 <label htmlFor="length">
@@ -69,9 +70,10 @@ const AddMeasurement = ({theOneUser, loaded, onNewAddedMeasurement}) => {
                 </label>
                 <br/>
                 <br/>
-                <button>Submit</button>
+                <button>Submit<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button>
 
             </form>
+            </div>
         </>
     )
 }
