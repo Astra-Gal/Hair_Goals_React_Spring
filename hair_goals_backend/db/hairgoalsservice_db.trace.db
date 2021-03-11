@@ -1675,6 +1675,9 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
+<<<<<<< HEAD
+2021-03-11 10:41:16 database: flush
+=======
 2021-03-10 19:39:55 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/giuliagalastro/codeclan_work/final_project/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.get(DbException.java:194)
@@ -1728,6 +1731,7 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at org.h2.mvstore.FileStore.open(FileStore.java:163)
 	... 28 more
 2021-03-10 20:37:55 database: flush
+>>>>>>> develop
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/giuliagalastro/codeclan_work/final_project/hair_goals_backend/db/hairgoalsservice_db.mv.db [1.4.200/7]" [50000-200]
 	at org.h2.message.DbException.get(DbException.java:194)
 	at org.h2.message.DbException.convert(DbException.java:347)

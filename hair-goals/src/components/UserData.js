@@ -24,7 +24,8 @@ const UserData = ({theOneUser}) => {
     return (
 
       <>
-
+        <div className="wrapper">
+        <div className="inner-wrapper">
 
         <h2>Congratulations, {theOneUser.name}!</h2>
         <ul>
@@ -38,6 +39,8 @@ const UserData = ({theOneUser}) => {
 
         <Link to='/add-measurement' className="navlink"><button>Add Measurement</button></Link>
 
+        </div>
+        </div>
         </>
     )
 }
