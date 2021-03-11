@@ -36,7 +36,7 @@ const EditDetails = ({theOneUser, onUpdated}) => {
     return (
 
         <>
-        <h5>Edit your details HERE!!!!!!!</h5>
+        <h5>Edit your details!</h5>
 
         </>
     )
