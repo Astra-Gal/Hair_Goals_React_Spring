@@ -78,9 +78,7 @@ const HairGoalsContainer = () => {
         console.log("Running handleAddMeasurement")
         const request = new Request();
         request.post("/measurements", measurement)
-        // const request2 = new Request();
-        // request2.patch("/users/1", user)
-        // .then(() => window.location = "/user-details/1")
+        .then(() => window.location = "/user-details/1")
     }
 
 
@@ -99,7 +97,7 @@ const HairGoalsContainer = () => {
                     <Route exact path="/" component={Welcome}/>
                     <Route path="/new-user" render={() => <NewUserForm theOneUser={users[0]} onNewUserSubmit={handleCreate}/>}/>
                     <Route path="/user-details/1" render={() => <UserData theOneUser={users[0]} loaded={loaded}/>}/>
-                    <Route path="/add-measurement" render={() => <AddMeasurement onNewAddedMeasurement={handleAddMeasurement}/>}/>
+                    <Route path="/add-measurement" render={() => <AddMeasurement theOneUser={users[0]} loaded={loaded} onNewAddedMeasurement={handleAddMeasurement}/>}/>
                     <Route path="/edit-details" component={EditDetails}/>
                     <Route path="/about" component={About}/>
                     <Route path="/guide" component={Guide}/>

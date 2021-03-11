@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import UserData from './UserData';
-import NavBar from './NavBar';
-import Logo from './Logo';
+
 
 const NewUserForm = ({theOneUser, onNewUserSubmit}) => {
 
