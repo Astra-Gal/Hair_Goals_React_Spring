@@ -84,7 +84,7 @@ const HairGoalsContainer = () => {
     }
 
 
-    if(!users){
+    if(!users){  
         return null;
     }
     if(!loaded){
@@ -100,7 +100,7 @@ const HairGoalsContainer = () => {
                     <Route path="/new-user" render={() => <NewUserForm theOneUser={users[0]} onNewUserSubmit={handleCreate}/>}/>
                     <Route path="/user-details/1" render={() => <UserData theOneUser={users[0]} loaded={loaded}/>}/>
                     <Route path="/add-measurement" render={() => <AddMeasurement onNewAddedMeasurement={handleAddMeasurement}/>}/>
-                    <Route path="/edit-details" component={EditDetails}/>
+                    <Route path="/edit-details" render={() => <EditDetails theOneUser={users[0]} onUpdated={handleUpdate} loaded={loaded}/>}/>
                     <Route path="/about" component={About}/>
                     <Route path="/guide" component={Guide}/>
                     <Route component={ErrorPage}/>
