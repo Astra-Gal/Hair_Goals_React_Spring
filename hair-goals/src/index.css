@@ -50,8 +50,6 @@ p{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 60vw;
-  margin-left: 20vw;
   justify-content: center;
   align-items: center;
   overflow: auto;
@@ -61,7 +59,6 @@ p{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 400px;
   justify-content: center;
   overflow: auto;
 }
