@@ -1,13 +1,12 @@
 # Hair Goals
 
- This initial version has been built over 5 days by myself ([Giulia Galastro](https://github.com/Astra-Gal)), [Angelo Di Massimo](https://github.com/ange47rm), [Laura Almasi](https://github.com/Iyolya) and [Rhiannon Wilson](https://github.com/RhiannonAW123).
+This collaborative project grew out of my trials and tribulations trying to grow my hair over the pandemic! The initial version has been built over 5 days by myself ([Giulia Galastro](https://github.com/Astra-Gal)), [Angelo Di Massimo](https://github.com/ange47rm), [Laura Almasi](https://github.com/Iyolya) and [Rhiannon Wilson](https://github.com/RhiannonAW123).
 
-## Firstly, what's with the horse on the front page?!
-Human hair is political, and we were keen to avoid making anyone feel excluded on the basis of race or gender
+### Firstly, what's with the horse on the front page?!
+Human hair is political, and we were keen to avoid making anyone feel excluded on the basis of race or gender... also, this horse has great hair! The mobile version features a hare instead because puns.
 
 ## The Brief
 
-This collaborative project grew out of my trials and tribulations trying to grow my hair over the pandemic! Here's the brief we wrote for the MVP:
 * A user can enter a length measurement, and see a projection (initially as a string) of how their hair will grow over time based on the average one centimetre a month
 * A user can specify their goal length, and the app will calculate (based on the average growth rate) how long it will take to reach the goal
 * A user can add update their hair length after taking new measurements, and the app will adjust how long it will take to reach their goal
