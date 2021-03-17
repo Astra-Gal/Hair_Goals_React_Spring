@@ -7,9 +7,9 @@ const Guide = () => {
         <div className="wrapper">
         <div className="inner-wrapper">
     
-        <h2>Wanna Know how to measure those luscious locks?</h2>
+        <h2>Wanna know how to measure those luscious locks?</h2>
         <p>
-            Lay a tape measure flat from your front hairline (where your middle parting would be), 
+            Lay a tape measure flat from the centre of your front hairline (where your middle parting would be), 
             and let it run over the top of your head and down your back. It's easiest to get a friend to help you
             for the most accurate measuerments!           
         </p>
