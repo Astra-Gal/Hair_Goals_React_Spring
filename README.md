@@ -21,7 +21,7 @@ We are keen to keep working on the project, drawing on user research conducted o
 
 ----------
 
-## Running the app
+## How to run
 Hair Goals is a full stack application. The JavaScript frontend was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and the Java backend uses [Spring Boot](https://start.spring.io/) with an [H2 database](https://www.h2database.com/html/main.html).
 
 ### Backend
