@@ -10,7 +10,7 @@ if(!theOneUser){
             <Link to="/" className="navlink">Mane</Link>
         </li>
         <li>
-            <Link to='/new-user' className="navlink">New User? Sign Up Here?</Link>
+            <Link to='/new-user' className="navlink">New User? Sign Up Here!</Link>
         </li>
         <li>
                 <Link to='/about' className="navlink">About us</Link>
