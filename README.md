@@ -1,15 +1,23 @@
 # Hair Goals
+<img width="1382" alt="Screenshot of Desktop version of Hair Goals 2021-03-17 at 11 58 25" src="https://user-images.githubusercontent.com/69347343/111464555-ce988900-8718-11eb-9c3c-29ac6cf8c34f.png">
+
+<img width="369" alt="Screenshot of mobile version of Hair Goals 2021-03-17 at 11 59 09" src="https://user-images.githubusercontent.com/69347343/111464588-d9ebb480-8718-11eb-8b53-3c3d08410b4d.png">
 
 This collaborative project grew out of my trials and tribulations trying to grow my hair over the pandemic! The initial version has been built over 5 days by myself ([Giulia Galastro](https://github.com/Astra-Gal)), [Angelo Di Massimo](https://github.com/ange47rm), [Laura Almasi](https://github.com/Iyolya) and [Rhiannon Wilson](https://github.com/RhiannonAW123).
 
-### Firstly, what's with the horse on the front page?!
-Human hair is political, and we were keen to avoid making anyone feel excluded on the basis of race or gender... also, this horse has great hair! The mobile version features a hare instead because puns.
 
 ## The Brief
+
+### MVP
 
 * A user can enter a length measurement, and see a projection (initially as a string) of how their hair will grow over time based on the average one centimetre a month
 * A user can specify their goal length, and the app will calculate (based on the average growth rate) how long it will take to reach the goal
 * A user can add update their hair length after taking new measurements, and the app will adjust how long it will take to reach their goal
+
+### Design
+#### Firstly, what's with the horse?!
+Human hair is political, and we were keen to avoid making anyone feel excluded on the basis of race or gender... also, this horse has great hair! The mobile version features a hare instead because puns.
+
 
 ## Future Directions
 We are keen to keep working on the project, drawing on user research conducted on the [Long Hair Community Forum](https://forums.longhaircommunity.com/showthread.php?t=153831). Some examples of things in the pipeline...
