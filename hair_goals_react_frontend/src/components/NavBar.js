@@ -7,10 +7,10 @@ if(!theOneUser){
     return (
         <ul className="navbar">
         <li>
-            <Link to="/" className="navlink">Home</Link>
+            <Link to="/" className="navlink">Mane</Link>
         </li>
         <li>
-            <Link to='/new-user' className="navlink">New User? Sign Up Here?</Link>
+            <Link to='/new-user' className="navlink">New User? Sign Up Here!</Link>
         </li>
         <li>
                 <Link to='/about' className="navlink">About us</Link>
@@ -27,7 +27,7 @@ if(!theOneUser){
     return (
         <ul className="navbar">
         <li>
-            <Link to="/" className="navlink">Home</Link>
+            <Link to="/" className="navlink">Mane</Link>
         </li>
         <li>
             <Link to='/user-details/1' className="navlink">My Details</Link>
