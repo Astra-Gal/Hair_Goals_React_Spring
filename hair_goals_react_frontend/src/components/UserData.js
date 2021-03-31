@@ -21,6 +21,7 @@ const UserData = ({theOneUser}) => {
       return <li key={index} className="measurelist"> Date measured: {measurement.dateMeasured} - Length: {measurement.length}</li>
     })
 
+// If the user has been created, and has measurements in their Measurement Array
 
     if (theOneUser.measurements.length >= 1){
 
@@ -45,13 +46,14 @@ const UserData = ({theOneUser}) => {
         <p>Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!</p>
 
         <Link to='/add-measurement' className="button-link"><button>Add Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
+        <Link to="/edit-details" className="button-link"><button>Edit Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
 
   </div>
   </div>
         </>
     )
   }
-
+// User has been created but there are no measurements yet
   if (theOneUser.measurements.length === 0){
     return (
 
@@ -70,6 +72,7 @@ const UserData = ({theOneUser}) => {
         <p>Your hair is {theOneUser.keyLength.toLowerCase()} length - hoorah for you!</p>
 
         <Link to='/add-measurement' className="button-link"><button>Add Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
+        <Link to="/edit-details" className="button-link"><button>Edit Measurement<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg></button></Link>
 
         </div>
         </div>
