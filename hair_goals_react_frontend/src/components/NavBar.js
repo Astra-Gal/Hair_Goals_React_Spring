@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import LoginButton from '../components/LoginButton'
+import LogoutButton from '../components/LogoutButton'
 
 const NavBar = ({ theOneUser }) => {
     if (!theOneUser) {
@@ -28,6 +29,9 @@ const NavBar = ({ theOneUser }) => {
                 </li>
                 <li>
                     <LoginButton />
+                </li>
+                <li>
+                    <LogoutButton />
                 </li>
             </ul>
         )
