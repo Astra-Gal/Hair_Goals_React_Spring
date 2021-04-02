@@ -1,42 +1,42 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
-    const [name, setName] = useState('')
+    const [name, setName] = useState('');
 
-    const [hairLength, setHairLength] = useState('')
+    const [hairLength, setHairLength] = useState('');
 
-    const [goalHairLength, setGoalHairLength] = useState('')
+    const [goalHairLength, setGoalHairLength] = useState('');
 
     const handleNameChange = (evt) => {
-        setName(evt.target.value)
-    }
+        setName(evt.target.value);
+    };
 
     const handleHairLengthChange = (evt) => {
-        setHairLength(evt.target.value)
-    }
+        setHairLength(evt.target.value);
+    };
 
     const handleGoalHairLengthChange = (evt) => {
-        setGoalHairLength(evt.target.value)
-    }
+        setGoalHairLength(evt.target.value);
+    };
 
     const handleFormSubmit = (evt) => {
-        console.log('User has been submitted')
-        evt.preventDefault()
-        const nameToSubmit = name.trim()
-        const hairLengthToSubmit = hairLength
-        const goalHairLengthToSubmit = goalHairLength
+        console.log('User has been submitted');
+        evt.preventDefault();
+        const nameToSubmit = name.trim();
+        const hairLengthToSubmit = hairLength;
+        const goalHairLengthToSubmit = goalHairLength;
 
-        let proceed = true
+        let proceed = true;
 
         if (!nameToSubmit) {
-            proceed = false
+            proceed = false;
         }
         if (!hairLengthToSubmit) {
-            proceed = false
+            proceed = false;
         }
         if (!goalHairLengthToSubmit) {
-            proceed = false
+            proceed = false;
         }
 
         if (proceed === true) {
@@ -46,13 +46,13 @@ const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
                 growthRate: 1,
                 goalHairLength: goalHairLengthToSubmit,
                 keyLength: null,
-            })
+            });
 
-            setName('')
-            setHairLength(0)
-            setGoalHairLength(0)
+            setName('');
+            setHairLength(0);
+            setGoalHairLength(0);
         }
-    }
+    };
 
     if (!theOneUser) {
         return (
@@ -105,7 +105,7 @@ const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
                     </form>
                 </div>
             </>
-        )
+        );
     }
 
     return (
@@ -116,7 +116,7 @@ const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
                 <button>SEE USER DETAILS HERE</button>
             </Link>
         </>
-    )
-}
+    );
+};
 
-export default NewUserForm
+export default NewUserForm;

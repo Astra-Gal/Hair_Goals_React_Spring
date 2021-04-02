@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Guide = () => {
     return (
@@ -16,7 +16,7 @@ const Guide = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Guide
+export default Guide;

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UserData = ({ theOneUser }) => {
     if (!theOneUser) {
@@ -7,7 +7,7 @@ const UserData = ({ theOneUser }) => {
             <>
                 <h1>NOT AVAILABLE</h1>
             </>
-        )
+        );
     }
 
     const userMeasurements = theOneUser.measurements.map(
@@ -18,15 +18,15 @@ const UserData = ({ theOneUser }) => {
                     Date measured: {measurement.dateMeasured} - Length:{' '}
                     {measurement.length}
                 </li>
-            )
-        }
-    )
+            );
+        },
+    );
 
     // If the user has been created, and has measurements in their Measurement Array
 
     if (theOneUser.measurements.length >= 1) {
         let latestMeasurement =
-            theOneUser.measurements[theOneUser.measurements.length - 1].length
+            theOneUser.measurements[theOneUser.measurements.length - 1].length;
 
         return (
             <>
@@ -80,7 +80,7 @@ const UserData = ({ theOneUser }) => {
                     </div>
                 </div>
             </>
-        )
+        );
     }
     // User has been created but there are no measurements yet
     if (theOneUser.measurements.length === 0) {
@@ -136,8 +136,8 @@ const UserData = ({ theOneUser }) => {
                     </div>
                 </div>
             </>
-        )
+        );
     }
-}
+};
 
-export default UserData
+export default UserData;

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import LoginButton from '../components/LoginButton'
-import LogoutButton from '../components/LogoutButton'
-import Profile from '../components/Profile'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LoginButton from '../components/LoginButton';
+import LogoutButton from '../components/LogoutButton';
+import Profile from '../components/Profile';
 
 const NavBar = ({ theOneUser }) => {
     if (!theOneUser) {
@@ -38,7 +38,7 @@ const NavBar = ({ theOneUser }) => {
                     <Profile />
                 </li>
             </ul>
-        )
+        );
     }
 
     return (
@@ -64,7 +64,7 @@ const NavBar = ({ theOneUser }) => {
                 </Link>
             </li>
         </ul>
-    )
-}
+    );
+};
 
-export default NavBar
+export default NavBar;
