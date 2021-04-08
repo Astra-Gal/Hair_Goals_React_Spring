@@ -10,11 +10,13 @@ import ErrorPage from '../components/ErrorPage';
 import Request from '../helpers/Request';
 import About from '../components/About';
 import Guide from '../components/Guide';
+import { useAuth0 } from '@auth0/auth0-react'; // ADDED
 
 const HairGoalsContainer = () => {
     const [users, setUsers] = useState([]);
     const [measurements, setMeasurements] = useState([]);
     const [loaded, setLoaded] = useState(false);
+    const { isAuthenticated, user } = useAuth0(); // ADDED
 
     const getAllUsers = () => {
         console.log("Keep your hair on! I'm fetching the users NOW!");
@@ -96,6 +98,8 @@ const HairGoalsContainer = () => {
                             <NewUserForm
                                 theOneUser={users[0]}
                                 onNewUserSubmit={handleCreate}
+                                user={user}
+                                isAuthenticated={isAuthenticated}
                             />
                         )}
                     />

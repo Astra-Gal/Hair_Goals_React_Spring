@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
+const NewUserForm = ({
+    theOneUser,
+    onNewUserSubmit,
+    user,
+    isAuthenticated,
+}) => {
     const [name, setName] = useState('');
+    // reminder: set the name according to logged in user passed from Auth0
+    // check to see if there is a user passed from Auth0, if so, it uses their given name
 
     const [hairLength, setHairLength] = useState('');
 
@@ -54,7 +61,9 @@ const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
         }
     };
 
-    if (!theOneUser) {
+    if (isAuthenticated) {
+        return <p>{user.name}</p>;
+    } else if (!theOneUser) {
         return (
             <>
                 <div className="form-wrapper">
@@ -106,17 +115,15 @@ const NewUserForm = ({ theOneUser, onNewUserSubmit }) => {
                 </div>
             </>
         );
-    }
-
-    return (
+    } else {
         <>
             <h1> YOU ALREADY CREATED A USER!!! </h1>
 
             <Link to="/user-details/1" className="navlink">
                 <button>SEE USER DETAILS HERE</button>
             </Link>
-        </>
-    );
+        </>;
+    }
 };
 
 export default NewUserForm;
